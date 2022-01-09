@@ -4,6 +4,7 @@
 This contains a helper function for loading and saving CSV files.
 
 """
+from pathlib import Path
 import csv
 
 
@@ -28,3 +29,20 @@ def load_csv(csvpath):
         for row in csvreader:
             data.append(row)
     return data
+
+
+#EH: Save a list of qualified loan as csv
+def save_csv(filename, data):
+
+    #create header on output file
+    header =['Lender','Max Loan Amount','Max LTV','Max DTI','Min Credit Score','Interest Rate']
+
+    #create filename
+    
+    csvpath = Path(filename)
+    with open(csvpath, 'w', newline='') as csvfile:
+        csvwriter =csv.writer(csvfile,delimiter=",")
+        csvwriter.writerow(header)
+        for qualified_loan in data:
+            #write qualified list into csv output
+            csvwriter.writerow(qualified_loan[0:])

@@ -1,0 +1,44 @@
+    1  git status
+    2  cd "C:\Users\eunic\OneDrive\Desktop\FinTech Class"
+    3  ls
+    4  cd atm_app
+    5  git status
+    6  git commit -m "Add atm folders, readme, images"
+    7  git status
+    8  git push
+    9  git status
+   10  git add readme.md
+   11  git status
+   12  git commit -m "update content of readme."
+   13  clear
+   14  git status
+   15  git add README.md
+   16  git commit -m "update content of README file."
+   17  status
+   18  git status
+   19  git commit
+   20  git push
+   21  git status
+   22  clear
+   23  cd ..
+   24  ls
+   25  git clone https://github.com/EuniceH/Loan_Qualifier_App.git
+   26  cd Loan_Qualifier_App/
+   27  git status
+   28  git rm new_file.txt 
+   29  git status
+   30  git commit -m "remove text file"
+   31  git push
+   32  git status
+   33  git add loan_qualifier_app/
+   34  git status
+   35  git commit -m "add loan qualifier app folder"
+   36  git push
+   37  git status
+   38  git add README.md
+   39  git commit -m "update README"
+   40  git push
+   41  git status
+   42  conda activate dev
+   43  code .
+   44  history 50 > terminal_history.txt

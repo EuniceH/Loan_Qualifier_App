@@ -11,6 +11,9 @@ import fire
 import questionary
 from pathlib import Path
 
+#EH:  import csv module
+import csv
+
 from qualifier.utils.fileio import load_csv
 
 from qualifier.utils.calculators import (
@@ -23,6 +26,8 @@ from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
 
+#EH: import csv_save function from fileio file
+from qualifier.utils.fileio import save_csv
 
 def load_bank_data():
     """Ask for the file path to the latest banking data and load the CSV file.
@@ -110,6 +115,17 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
+    if len(qualifying_loans)>0:
+
+        filename = questionary.text("Enter a filename to save qualified loan list (.csv):").ask()
+
+    
+        if filename[-4:]!=".csv":
+            sys.exit(f"Oops! The filename is not valid.  Please re-try.")
+
+        return save_csv(filename,qualifying_loans)
+
+
 
 
 def run():
@@ -128,6 +144,7 @@ def run():
 
     # Save qualifying loans
     save_qualifying_loans(qualifying_loans)
+    
 
 
 if __name__ == "__main__":
