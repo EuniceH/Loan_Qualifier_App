@@ -1,0 +1,33 @@
+    1  conda activate dev
+    2  code .
+    3  cd "C:\Users\eunic\OneDrive\Desktop\FinTech Class\Loan_Qualifier_App\loan_qualifier_app\app.py"
+    4  clear
+    5  cd C:\Users\eunic\OneDrive\Desktop\FinTech Class\Loan_Qualifier_App\loan_qualifier_app
+    6  clear
+    7  cd "C:\Users\eunic\OneDrive\Desktop\FinTech Class\Loan_Qualifier_App\loan_qualifier_app"
+    8  python app.py
+    9  clear
+   10  python app.py
+   11  clear
+   12  app.py
+   13  python.py
+   14  cd ..
+   15  history 50 > terminal_history.txt
+   16  ls
+   17  cd loan_qualifier_app/
+   18  history 50 > terminal_history.txt
+   19  git status
+   20  git add README.md
+   21  git commit -m "update README"
+   22  git push
+   23  git status
+   24  git add app.py qualifier/
+   25  git commit -m "update python code and comment"
+   26  git push
+   27  git status
+   28  git status
+   29  git add images/save_yn.png 
+   30  git commit -m "add image for README"
+   31  git push
+   32  git status
+   33  history 50 > terminal_history.txt
