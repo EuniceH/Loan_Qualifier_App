@@ -6,7 +6,7 @@ against the bank's maximum loan size.
 
 """
 
-
+#EH:  Filters the bank list by the maximum allowed loan amount.
 def filter_max_loan_size(loan_amount, bank_list):
     """Filters the bank list by the maximum allowed loan amount.
 
@@ -18,8 +18,10 @@ def filter_max_loan_size(loan_amount, bank_list):
         A list of qualifying bank loans.
     """
 
+#EH:   create a blank loan size approval list.
     loan_size_approval_list = []
 
+#EH:  append the bank loan offer to loan size approval list when bank loan size offer amount is larger or equal to customer's request.
     for bank in bank_list:
         if loan_amount <= int(bank[1]):
             loan_size_approval_list.append(bank)
